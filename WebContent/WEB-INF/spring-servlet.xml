@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:p="http://www.springframework.org/schema/p"
+          xmlns:task="http://www.springframework.org/schema/task"
+          xmlns:context="http://www.springframework.org/schema/context"
+          xmlns:mvc="http://www.springframework.org/schema/mvc"
+          xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/task 
+  		http://www.springframework.org/schema/task/spring-task.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd" >
+     
+     <!-- declaring base package -->
+     <context:component-scan  base-package="com.workshop" />
+     
+     <mvc:annotation-driven/> 
+
+     <!-- adding view resolver to show jsp's on browser -->  
+     <bean id="viewResolver"
+               class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+          <property name="viewClass"
+               value="org.springframework.web.servlet.view.JstlView" />
+          <property name="prefix" value="/WEB-INF/jsp/" />
+          <property name="suffix" value=".jsp" />
+     </bean>
+     
+     <mvc:resources mapping="/resources/**" location="/resources/" cache-period="31556926"/>
+	
+	<!-- declare beans -->  
+	 <bean id="teamDao" class="com.workshop.dao.TeamDaoImpl" />  
+	 <bean id="teamService" class="com.workshop.services.TeamServiceImpl" /> 
+	 <bean id="userDao" class="com.workshop.dao.UserDaoImpl" />  
+	 <bean id="userService" class="com.workshop.services.UserServiceImpl" />   
+	 <bean id="loginHistoryDao" class="com.workshop.dao.LoginHistoryDaoImpl" />  
+	 <bean id="loginHistoryService" class="com.workshop.services.LoginHistoryServiceImpl" />
+	 <bean id="pokemonDao" class="com.workshop.dao.PokemonDaoImpl" />  
+	 <bean id="pokemonService" class="com.workshop.services.PokemonServiceImpl" />
+	 <bean id="pokedexDao" class="com.workshop.dao.PokedexDaoImpl" />  
+	 <bean id="pokedexService" class="com.workshop.services.PokedexServiceImpl" />
+	 <bean id="huntTransactionDao" class="com.workshop.dao.HuntTransactionDaoImpl" />  
+	 <bean id="huntTransactionService" class="com.workshop.services.HuntTransactionServiceImpl" />
+	 <bean id="purchaseTransactionDao" class="com.workshop.dao.PurchaseTransactionDaoImpl" />  
+	 <bean id="purchaseTransactionService" class="com.workshop.services.PurchaseTransactionServiceImpl" />
+	 <bean id="itemDao" class="com.workshop.dao.ItemDaoImpl" />  
+	 <bean id="itemService" class="com.workshop.services.ItemServiceImpl" />
+	 <bean id="pokeballReloadDao" class="com.workshop.dao.PokeballReloadDaoImpl" />  
+	 <bean id="pokeballReloadService" class="com.workshop.services.PokeballReloadServiceImpl" />
+	 
+	 <bean id="paymentService" class="com.workshop.services.PaymentServiceClient" />
+	 
+
+	 <bean id="dataSource"  
+	  class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
+	  <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />  
+	  <property name="url" value="jdbc:sqlserver://192.168.9.154:1433;DatabaseName=POKEMON_WORKSHOP" />  
+	  <property name="username" value="workshop" />  
+	  <property name="password" value="password" />  
+	 </bean>
+	 
+	  	<!-- declare datasource bean --> 
+<!-- 	 <bean id="dataSource"   -->
+<!-- 	  class="org.springframework.jdbc.datasource.DriverManagerDataSource" >   -->
+<!-- 	  <property name="driverClassName" value="com.mysql.jdbc.Driver" />   -->
+<!-- 	  <property name="url" value="jdbc:mysql://localhost:3306/pokemon_workshop" />   -->
+<!-- 	  <property name="username" value="root" />   -->
+<!-- 	  <property name="password" value="0001" />   -->
+<!-- 	 </bean> -->
+    
+</beans>

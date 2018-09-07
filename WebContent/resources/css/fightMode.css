@@ -1,0 +1,51 @@
+.selectAttackContainer{
+	text-align:center;
+}
+
+.checkAttack > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+.checkAttack > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+}
+.checkAttack > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid red;
+}
+
+
+
+.cc-selector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+.hammer{background-image: url('../pic/hammer_pic.png');}
+.scissor{background-image: url('../pic/scissor_pic.png');}
+.paper{background-image: url('../pic/paper_pic.png');}
+
+.cc-selector input:active +.attack-cc{opacity: .9;}
+.cc-selector input:checked +.attack-cc{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+.attack-cc{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:100px;height:70px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+            filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+.attack-cc:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+}

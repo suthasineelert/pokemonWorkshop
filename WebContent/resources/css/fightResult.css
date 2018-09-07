@@ -1,0 +1,28 @@
+.result{
+	text-align: center;
+	margin: 0 auto;
+	width: 60%;
+}
+#pokeWin{
+	float: left;
+	margin-left: 50px;
+}
+#playerWin{
+	float: right;
+	margin-right: 50px;
+}
+
+.fightInfoContainer img{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.red{
+	color: red;
+}
+.fightInfoContainer{
+	margin: 0 auto;
+	width: 60%;
+}
+.skipButton{
+	margin-right: 50px;
+}

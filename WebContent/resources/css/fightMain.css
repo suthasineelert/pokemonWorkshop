@@ -1,0 +1,23 @@
+
+.mainContainer{
+	height: 600px;
+}
+.fightInfoContainer{
+	margin-top: 20px;
+	text-align:center;
+}
+.choice{
+	text-align:center;
+	margin-top: 15px;
+}
+.clear{
+	clear: both;
+}
+p{
+	color: #ffffff;
+}
+.alert{
+	margin: 20px 20px;
+}
+
+

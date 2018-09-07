@@ -1,0 +1,52 @@
+body{
+	height: 600px;
+}
+.itemContainer{
+	//border: 2px solid red;
+	margin: 50px auto;
+	text-align: center;
+	width: 70%;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 50px;
+}
+.infoContainer{
+	//border: 2px solid red;
+	margin: 50px auto;
+	text-align: center;
+	width: 70%;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 50px;
+}
+body {
+	background-image:url("../pic/backgroud_pic.png");
+	background-repeat:no-repeat;
+    background-size: 100% 120%;
+    }
+.item{
+	//border: 2px solid green;
+}
+.price{
+	margin-left: 150px;
+}
+.buybutton{
+	margin-left: 50px;
+}
+label{
+	margin: 0;
+}
+
+
+/*** Payment Page ***/
+.payButton{
+	float: right;
+}
+td{
+	width: 150px;
+}
+td.inputContainer{
+	width: 200px;
+}
+table{
+	margin: 0 auto;
+	text-align: left;
+}

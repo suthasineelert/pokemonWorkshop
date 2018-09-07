@@ -1,0 +1,130 @@
+
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    height: 300px;
+    overflow-y: scroll;
+    background-color: #ffffff;
+}
+
+
+
+.info{
+	float:right;
+	width: 84%;
+	overflow: hidden;
+}
+#playerImage{
+	//border:2px solid green;
+	margin-top: 25px;
+	display: inline-block;
+	width:13%;
+	margin-left: 15px;
+}
+#teamImage{
+	//border:2px solid green;
+	margin-top: 25px;
+	margin-left: 20px;
+	display: inline-block;
+	width:15%;
+	height:500px;
+}
+.infoContainer{
+	//border:2px solid blue;
+	float: left;
+	width: 80%;
+	heigth: 100%;
+}
+.button{
+	float:right;
+	margin-right: 20px;
+	margin-top: 5px;
+}
+.clear{
+	clear: both;
+}
+
+
+/*** Table Style ****/
+.dashTable {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+th{
+    border: 1px solid #d9d9d9;
+    text-align: left;
+    padding: 8px;
+    background-color: #00284d;
+    color: #efffff;
+}
+td {
+    border: 1px solid #d9d9d9;
+    text-align: left;
+    padding: 8px;
+}
+
+/*** Pokedex Style ***/
+.pokemonPic{
+	display: inline-block;
+	text-align: center;
+}
+.pokedex{
+	margin: 0 auto;
+}
+
+/*** Next Page ***/
+.wrapper{
+  margin: 60px auto;
+  text-align: center;
+}
+h1{
+  margin-bottom: 1.25em;
+}
+#pagination-demo{
+  display: inline-block;
+  margin-bottom: 1.75em;
+}
+#pagination-demo li{
+  display: inline-block;
+}
+
+.page-content{
+  background: #eee;
+  display: inline-block;
+  padding: 10px;
+  width: 100%;
+  max-width: 660px;
+}
